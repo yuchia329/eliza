@@ -11,7 +11,7 @@ pre: dreamt dreamed
 pre: dreams dream
 pre: maybe perhaps
 pre: how what
-pre: when what
+pre: show tell
 pre: certainly yes
 pre: machine computer
 pre: computers computer
@@ -36,6 +36,9 @@ synon: happy elated glad better
 synon: cannot can't
 synon: everyone everybody nobody noone
 synon: be am is are was
+synon: show tell talk say describe illustrate present
+synon: i you we they he she it
+synon: he she it
 key: xnone
   decomp: *
     reasmb: I'm not sure I understand you fully.
@@ -287,6 +290,21 @@ key: can
     reasmb: Perhaps you don't want to (2) .
     reasmb: goto what
 key: what
+  decomp: * !
+    reasmb: Wow, right.
+  decomp: *
+    reasmb: Why do you ask ?
+    reasmb: Does that question interest you ?
+    reasmb: What is it you really wanted to know ?
+    reasmb: Are such questions much on your mind ?
+    reasmb: What answer would please you most ?
+    reasmb: What do you think ?
+    reasmb: What comes to mind when you ask that ?
+    reasmb: Have you asked such questions before ?
+    reasmb: Have you asked anyone else ?
+key: when
+  decomp: * .
+    reasmb: Good to know that.
   decomp: *
     reasmb: Why do you ask ?
     reasmb: Does that question interest you ?
@@ -357,4 +375,14 @@ key: alike 10
 key: like 10
   decomp: * @be * like *
     reasmb: goto alike
-   
+key: tell
+  decomp: *
+    reasmb: I do not have ability to describe things .
+key: do
+  decomp: do @i * ?
+    reasmb: Absolutely! (1) (2) .
+    reasmb: No, (1) do not (2) .
+key: does
+  decomp: does @i * ?
+    reasmb: Absolutely! (1) (2) .
+    reasmb: No! (1) does not (2) .
